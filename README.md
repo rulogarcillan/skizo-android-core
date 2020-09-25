@@ -1,1 +1,1 @@
-# skizo-core
+# skizo-android-core
