@@ -1,4 +1,4 @@
-package com.tuppersoft.skizo.core.logger
+package com.tuppersoft.skizo.android.core.logger
 
 import android.util.Log
 

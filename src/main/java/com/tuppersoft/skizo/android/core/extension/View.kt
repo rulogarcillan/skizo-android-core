@@ -1,4 +1,4 @@
-package com.tuppersoft.skizo.core.extension
+package com.tuppersoft.skizo.android.core.extension
 
 import android.content.Context
 import android.view.View

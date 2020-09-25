@@ -1,4 +1,4 @@
-package com.tuppersoft.skizo.core
+package com.tuppersoft.skizo.android.core
 
 import org.junit.Test
 

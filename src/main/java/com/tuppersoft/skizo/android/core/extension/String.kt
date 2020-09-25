@@ -1,6 +1,6 @@
-package com.tuppersoft.skizo.core.extension
+package com.tuppersoft.skizo.android.core.extension
 
-import com.tuppersoft.skizo.core.logger.SkizoLog
+import com.tuppersoft.skizo.android.core.logger.SkizoLog
 
 /**
  * Created by Raúl Rodríguez Concepción on 30/07/2020.

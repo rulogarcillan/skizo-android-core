@@ -1,4 +1,4 @@
--assumenosideeffects class com.tuppersoft.skizo.core.logger.SkizoLog {
+-assumenosideeffects class com.tuppersoft.skizo.android.core.logger.SkizoLog {
   public final *** v(...);
   public final *** d(...);
   public final *** i(...);

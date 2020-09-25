@@ -1,4 +1,4 @@
-package com.tuppersoft.skizo.core
+package com.tuppersoft.skizo.android.core
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -20,6 +20,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.tuppersoft.skizo.core.test", appContext.packageName)
+        assertEquals("com.tuppersoft.skizo.android.core.test", appContext.packageName)
     }
 }
