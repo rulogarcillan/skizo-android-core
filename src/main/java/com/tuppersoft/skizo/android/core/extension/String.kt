@@ -30,10 +30,13 @@ fun String.loge(tr: Throwable? = null) {
 private fun buildTag(): String {
     return try {
         "${SkizoLog.TAG} " + Thread.currentThread().stackTrace[5].fileName.split("\\.".toRegex())
-            .toTypedArray()[0] + "." + Thread.currentThread().stackTrace[5]
+            .toTypedArray()[Int.ZERO] + "." + Thread.currentThread().stackTrace[5]
             .methodName + ":" + Thread.currentThread().stackTrace[5].lineNumber
     } catch (_: Throwable) {
         SkizoLog.TAG
     }
 }
+
+val String.Companion.EMPTY: String
+    get() = ""
 
