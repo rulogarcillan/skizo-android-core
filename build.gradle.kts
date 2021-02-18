@@ -7,7 +7,6 @@ plugins {
 android {
     buildFeatures {
         viewBinding = true
-        dataBinding = true
     }
     compileSdkVersion(Dependencies.SdkVersion.sdkVersion)
     buildToolsVersion(Dependencies.SdkVersion.buildVersion)
