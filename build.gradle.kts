@@ -1,10 +1,14 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
-
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
     compileSdkVersion(Dependencies.SdkVersion.sdkVersion)
     buildToolsVersion(Dependencies.SdkVersion.buildVersion)
 
@@ -13,7 +17,7 @@ android {
         targetSdkVersion(Dependencies.SdkVersion.sdkVersion)
         versionCode = 1
         versionName = "1.0"
-        // consumerProguardFiles = "consumer-rules.pro"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -41,8 +45,7 @@ android {
 
 dependencies {
     implementation(Dependencies.Kotlin.stdlib)
-    implementation(Dependencies.Android.appcompat)
-    implementation(Dependencies.Android.material)
     implementation(Dependencies.Android.preference)
 
+    implementation(Dependencies.LibsTest.all)
 }

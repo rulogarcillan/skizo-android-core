@@ -1,6 +1,7 @@
 package com.tuppersoft.skizo.android.core.logger
 
 import android.util.Log
+import com.tuppersoft.skizo.android.core.extension.EMPTY
 
 /**
  * Created by Raúl Rodríguez Concepción on 29/07/2020.
@@ -16,73 +17,53 @@ object SkizoLog {
         enabled = flag
     }
 
-    fun v(msg: String = "", tr: Throwable? = null) {
+    fun v(msg: String = String.EMPTY, tr: Throwable? = null) {
         v(buildTag(), msg, tr)
     }
 
-    fun v(tag: String, msg: String = "", tr: Throwable? = null) {
+    fun v(tag: String, msg: String = String.EMPTY, tr: Throwable? = null) {
         if (enabled) {
-            if (tr == null) {
-                Log.v(tag, msg, tr)
-            } else {
-                Log.v(tag, msg)
-            }
+            tr?.let { Log.v(tag, msg, tr) } ?: Log.v(tag, msg)
         }
     }
 
-    fun d(msg: String = "", tr: Throwable? = null) {
+    fun d(msg: String = String.EMPTY, tr: Throwable? = null) {
         d(buildTag(), msg, tr)
     }
 
-    fun d(tag: String, msg: String = "", tr: Throwable? = null) {
+    fun d(tag: String, msg: String = String.EMPTY, tr: Throwable? = null) {
         if (enabled) {
-            if (tr == null) {
-                Log.d(tag, msg, tr)
-            } else {
-                Log.d(tag, msg)
-            }
+            tr?.let { Log.d(tag, msg, tr) } ?: Log.d(tag, msg)
         }
     }
 
-    fun i(msg: String = "", tr: Throwable? = null) {
+    fun i(msg: String = String.EMPTY, tr: Throwable? = null) {
         i(buildTag(), msg, tr)
     }
 
-    fun i(tag: String, msg: String = "", tr: Throwable? = null) {
+    fun i(tag: String, msg: String = String.EMPTY, tr: Throwable? = null) {
         if (enabled) {
-            if (tr == null) {
-                Log.i(tag, msg, tr)
-            } else {
-                Log.i(tag, msg)
-            }
+            tr?.let { Log.i(tag, msg, tr) } ?: Log.i(tag, msg)
         }
     }
 
-    fun w(msg: String = "", tr: Throwable? = null) {
+    fun w(msg: String = String.EMPTY, tr: Throwable? = null) {
         w(buildTag(), msg, tr)
     }
 
-    fun w(tag: String, msg: String = "", tr: Throwable? = null) {
+    fun w(tag: String, msg: String = String.EMPTY, tr: Throwable? = null) {
         if (enabled) {
-            if (tr == null) {
-                Log.w(tag, msg, tr)
-            } else {
-                Log.w(tag, msg)
-            }
+            tr?.let { Log.w(tag, msg, tr) } ?: Log.w(tag, msg)
         }
     }
 
-    fun e(msg: String = "", tr: Throwable? = null) {
+    fun e(msg: String = String.EMPTY, tr: Throwable? = null) {
         e(buildTag(), msg, tr)
     }
 
-    fun e(tag: String, msg: String = "", tr: Throwable? = null) {
+    fun e(tag: String, msg: String = String.EMPTY, tr: Throwable? = null) {
         if (enabled) {
-            if (tr == null) {
-                Log.e(tag, msg, tr)
-            } else {
-                Log.e(tag, msg)
-            }
+            tr?.let { Log.e(tag, msg, tr) } ?: Log.e(tag, msg)
         }
     }
 

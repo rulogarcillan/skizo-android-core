@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="typeFonts">
-        <attr name="fontTypeThin" format="string" />
-        <attr name="fontTypeLight" format="string" />
-        <attr name="fontTypeRegular" format="string" />
-        <attr name="fontTypeMedium" format="string" />
-        <attr name="fontTypeBold" format="string" />
+        <attr name="fontTypeThin" format="reference" />
+        <attr name="fontTypeLight" format="reference" />
+        <attr name="fontTypeRegular" format="reference" />
+        <attr name="fontTypeMedium" format="reference" />
+        <attr name="fontTypeBold" format="reference" />
     </declare-styleable>
 </resources>
