@@ -17,8 +17,8 @@ abstract class BaseFragment<E : ViewBinding>(private val bindingClass: Class<E>)
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val method = bindingClass.getMethod("inflate", LayoutInflater::class.java)
-        _binding = method.invoke(null, layoutInflater) as E
+        val method = bindingClass.getMethod("inflate", LayoutInflater::class.java, ViewGroup::class.java, Boolean::class.java)
+        _binding = method.invoke(null, layoutInflater, container, false) as E
         return binding.root
     }
 

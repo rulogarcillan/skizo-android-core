@@ -45,6 +45,7 @@ android {
 dependencies {
     implementation(Dependencies.Kotlin.stdlib)
     implementation(Dependencies.Android.preference)
+    implementation(Dependencies.Android.recyclerView)
 
     implementation(Dependencies.LibsTest.all)
 }
