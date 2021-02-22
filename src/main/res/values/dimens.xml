@@ -42,4 +42,7 @@
     <dimen name="margin_1">1dp</dimen>
     <dimen name="margin_0">0dp</dimen>
 
+    <dimen name="no_heigth">0dp</dimen>
+    <dimen name="no_width">0dp</dimen>
+
 </resources>

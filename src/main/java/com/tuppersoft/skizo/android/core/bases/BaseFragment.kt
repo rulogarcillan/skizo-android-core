@@ -24,8 +24,13 @@ abstract class BaseFragment<E : ViewBinding>(private val bindingClass: Class<E>)
         val method =
             bindingClass.getMethod("inflate", LayoutInflater::class.java, ViewGroup::class.java, Boolean::class.java)
         _binding = method.invoke(null, layoutInflater, container, false) as E
-        initObserversFlow()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        onView(view, savedInstanceState)
+        initObserversFlow()
     }
 
     override fun onDestroyView() {
@@ -40,6 +45,7 @@ abstract class BaseFragment<E : ViewBinding>(private val bindingClass: Class<E>)
             }
         }
 
+    protected abstract fun onView(view: View, savedInstanceState: Bundle?)
     protected abstract fun initObserversFlow()
 }
 

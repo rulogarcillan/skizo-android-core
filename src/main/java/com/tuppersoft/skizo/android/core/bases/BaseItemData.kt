@@ -3,6 +3,7 @@ package com.tuppersoft.skizo.android.core.bases
 import androidx.recyclerview.widget.DiffUtil
 
 abstract class BaseItemData {
+
     abstract val id: String
     fun areItemsTheSame(oldItem: BaseItemData) = this.id == oldItem.id
     fun areContentsTheSame(oldItem: BaseItemData) = this == oldItem
