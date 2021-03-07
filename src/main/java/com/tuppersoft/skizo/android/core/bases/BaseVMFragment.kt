@@ -32,9 +32,9 @@ abstract class BaseVMFragment<E : ViewBinding, VM : BaseViewModel<T, S>, T : Bas
             }
         }
 
-    protected fun <T : BaseState, L : MutableStateFlow<T>> Fragment.navigate(stateflow: L, body: (T) -> Unit) =
-        lifecycleScope.launch {
-            stateflow.collect {
+    private fun <T : BaseState, L : StateLiveEvent<T>> Fragment.navigate(mutableLiveData: L, body: (T) -> Unit) =
+        mutableLiveData.observe(viewLifecycleOwner) {
+            it?.let {
                 body(it)
             }
         }

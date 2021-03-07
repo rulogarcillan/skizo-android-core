@@ -7,9 +7,7 @@ abstract class BaseData<S : BaseState>(
     val showError: MutableStateFlow<Boolean> = MutableStateFlow(false)
 ) {
 
-    val state: MutableStateFlow<S> = MutableStateFlow(this.getInitialState()).also { state = it }
-
-    abstract fun getInitialState(): S
+    val state: StateLiveEvent<S> = StateLiveEvent()
 
     fun showError() {
         showLoading.value = false
@@ -21,3 +19,6 @@ abstract class BaseData<S : BaseState>(
         showError.value = false
     }
 }
+
+
+
