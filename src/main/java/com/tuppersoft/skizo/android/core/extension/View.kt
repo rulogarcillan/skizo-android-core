@@ -18,6 +18,12 @@ import android.view.inputmethod.InputMethodManager
  */
 fun View.isVisible() = this.visibility == View.VISIBLE
 
+fun View.isVisible(isVisible: Boolean) {
+    this.post {
+        if (isVisible) this.visible() else this.gone()
+    }
+}
+
 /**
  * Show view
  */
